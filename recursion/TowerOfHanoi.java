@@ -2,8 +2,11 @@ package recursion;
 
 public class TowerOfHanoi {
 
+    public static int count = 0;
+
     // Recursive method to solve Tower of Hanoi puzzle
     public static void solveHanoi(int n, char sourceRod, char targetRod, char auxiliaryRod) {
+        count++;
         // Base case: If only 1 disk, simply move from source to target
         if (n == 1) {
             System.out.println("Move disk 1 from rod " + sourceRod + " to rod " + targetRod);
@@ -22,7 +25,7 @@ public class TowerOfHanoi {
     }
 
     public static void main(String[] args) {
-        int numOfDisks = 4; // Set the number of disks
+        int numOfDisks = Integer.parseInt(args[0]); // Set the number of disks
         long startTime = System.nanoTime();
         solveHanoi(numOfDisks, 'A', 'C', 'B'); // 'A' is source, 'C' is target, 'B' is auxiliary
         long endTime = System.nanoTime();
@@ -30,5 +33,6 @@ public class TowerOfHanoi {
 
         // Convert time from nanoseconds to milliseconds for easier readability
         System.out.println("Elapsed Time: " + duration / 1_000_000.0 + " ms");
+        System.out.println("Total number of moves: " + count);
     }
 }
