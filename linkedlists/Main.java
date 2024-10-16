@@ -1,5 +1,8 @@
 package linkedlists;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     
     public static void main(String[] args) {
@@ -19,5 +22,25 @@ public class Main {
         System.out.println("Size of the list: " + list.size());
 
 
+        List<String> list2 = new ArrayList<>();
+        list2.add("Apple");
+        list2.add("Banana");
+        list2.add("Cherry");
+        list2.add("Orange");
+        printList(list2);
+        printElement("Banana");
+
+    }
+
+    // Linear cost
+    public static void printList(List<String> list) {
+        for (String item : list) {
+            System.out.println(item);
+        }
+    }
+
+    // Constant cost
+    public static void printElement(String element) {
+        System.out.println(element);
     }
 }

@@ -15,6 +15,8 @@ public class LinkedList<T> {
         if (head == null) {
             head = newNode;
         } else {
+            // newNode.next = head.next;
+            // head.next = newNode;
             newNode.setNext(head.getNext());
             head.setNext(newNode);
         }
