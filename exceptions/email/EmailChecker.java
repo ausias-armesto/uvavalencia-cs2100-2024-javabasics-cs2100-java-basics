@@ -13,6 +13,8 @@ public class EmailChecker {
     }
     catch( IllegalEmailException iee )  {
       System.out.println( iee.getMessage( ) );
+    } finally {
+      scan.close( );
     }
   }
 }
