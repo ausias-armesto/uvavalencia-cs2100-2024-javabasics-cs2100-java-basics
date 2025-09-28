@@ -13,7 +13,7 @@ public class Main {
         // // Spanish Date
         SpanishDate spanishDate1 = new SpanishDate(1, 2, 2020);
         SpanishDate spanishDate2 = new SpanishDate("1", "2", "2020");
-        SpanishDate spanishDate3 = new SpanishDate("1/3/2021");
+        SpanishDate spanishDate3 = new SpanishDate("24/09/2025");
         System.out.println("SpanishDate1: " + spanishDate1);
         System.out.println("SpanishDate2: " + spanishDate2);
         System.out.println("SpanishDate3: " + spanishDate3);
@@ -41,15 +41,15 @@ public class Main {
         System.out.println("AmericanDate1: " + americanDate2);
         System.out.println("AmericanDate1: " + americanDate3);
 
-        // Timestamp
-        Timestamp timestamp1 = new Timestamp(1, 1, 2023, 16, 30, 50);
-        Timestamp timestamp2 = new Timestamp(1, 1, 2023, 16, 30, 50);
-        System.out.println("Timestamp1: " + timestamp1);
-        if (timestamp1.equals(timestamp2)){
-            System.out.println("Timestamp1 and Timestamp2 are equal");
-        } else {
-            System.out.println("[WARN] Timestamp1 and Timestamp2 are not equal");
-        }
+        // // Timestamp
+        // Timestamp timestamp1 = new Timestamp(1, 1, 2023, 16, 30, 50);
+        // Timestamp timestamp2 = new Timestamp(1, 1, 2023, 16, 30, 50);
+        // System.out.println("Timestamp1: " + timestamp1);
+        // if (timestamp1.equals(timestamp2)){
+        //     System.out.println("Timestamp1 and Timestamp2 are equal");
+        // } else {
+        //     System.out.println("[WARN] Timestamp1 and Timestamp2 are not equal");
+        // }
     }
     
 }

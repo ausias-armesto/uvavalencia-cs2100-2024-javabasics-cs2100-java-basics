@@ -1,0 +1,39 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "polymorphic.Main",
+            "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "inheritance.Main",
+            "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
+        },
+        {
+            "type": "java",
+            "name": "Vehicle",
+            "request": "launch",
+            "mainClass": "Vehicle",
+            "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
+        },
+        {
+            "type": "java",
+            "name": "MyArrrays",
+            "request": "launch",
+            "mainClass": "MyArrrays",
+            "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
+        },
+        {
+            "type": "java",
+            "name": "SumOfInts",
+            "request": "launch",
+            "mainClass": "SumOfInts"
+        }
+    ]
+}

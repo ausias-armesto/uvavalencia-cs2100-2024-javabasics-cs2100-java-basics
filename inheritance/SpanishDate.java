@@ -2,7 +2,12 @@ package inheritance;
 
 public class SpanishDate extends SimpleDate{
 
+    public SpanishDate() {
+        super();
+    }
+
     public SpanishDate(int day, int month, int year) {
+
         this.setDay(day);
         this.setMonth(month);
         this.setYear(year);
