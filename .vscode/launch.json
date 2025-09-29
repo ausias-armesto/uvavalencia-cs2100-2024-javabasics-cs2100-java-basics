@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MainDates",
+            "request": "launch",
+            "mainClass": "polymorphic.MainDates",
+            "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "interfaces.Main",
