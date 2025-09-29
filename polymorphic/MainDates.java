@@ -1,6 +1,6 @@
 package polymorphic;
 
-public class Main {
+public class MainDates {
 
     public static void main(String[] args) {
 
