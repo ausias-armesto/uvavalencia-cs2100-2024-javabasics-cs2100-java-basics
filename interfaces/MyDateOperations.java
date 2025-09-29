@@ -35,5 +35,23 @@ public interface MyDateOperations extends MyDate {
         return days;
     }
 
+    public default int daysFromStartOfYear() {
+        int days = 0;
+        for (int i = 1; i < this.getMonth(); i++) {
+            days += 30;
+        }
+        days += this.getDay();
+        return days;
+    }
+
+    public default int daysToEndOfYear() {
+        int days = 0;
+        for (int i = this.getMonth() + 1; i <= 12; i++) {
+            days += 30;
+        }
+        days += (30 - this.getDay());
+        return days;
+    }
+
     public String toString();
 }
