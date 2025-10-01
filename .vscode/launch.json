@@ -5,6 +5,20 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "generics.Main",
+            "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "interfaces.payment.Main",
+            "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "abstractclass.Main",
             "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
         },

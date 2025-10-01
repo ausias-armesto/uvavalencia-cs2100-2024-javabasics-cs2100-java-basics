@@ -18,7 +18,7 @@ public class PaymentService {
         if (paymentMethods.containsKey(methodName)) {
             paymentMethods.get(methodName).pay(amount);
         } else {
-            System.out.println("Payment method " + methodName + " not found.");
+            System.err.println("[ERROR] Payment method " + methodName + " not found.");
         }
     }
 

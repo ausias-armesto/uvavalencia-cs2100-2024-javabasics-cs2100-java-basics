@@ -12,8 +12,7 @@ public class Animal implements MyComparable<Animal> {
         return name;
     }
 
-    public int compareTo(Animal o) {
-        Animal other = (Animal) o;
+    public int compareTo(Animal other) {
         return this.name.compareTo(other.getName());
     }
 }

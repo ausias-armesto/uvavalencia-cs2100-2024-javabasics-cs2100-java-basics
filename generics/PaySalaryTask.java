@@ -3,6 +3,7 @@ package generics;
 // Task: PaySalaryTask
 class PaySalaryTask extends Task {
     private String employeeId;
+
     public PaySalaryTask(String employeeId) {
         super("PAY_SALARY");
         this.employeeId = employeeId;
