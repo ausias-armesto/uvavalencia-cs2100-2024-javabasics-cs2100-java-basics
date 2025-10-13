@@ -45,3 +45,10 @@ Create a class named _FindMinMax.java_ that ask the user to input **n** numbers 
 Notes:
 - First argument is the number of elements in the array
 - Next arguments are the elements of the array
+
+## Assignment 6
+
+Resolve the Hanoi tower problem.
+
+Notes:
+- Use the input _args_ parameters of the main method to specify the number of disks
