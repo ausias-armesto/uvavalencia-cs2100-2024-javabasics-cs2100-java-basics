@@ -17,7 +17,7 @@ public class Main {
         list.add(simpleDate);
         list.add(new SimpleDate(02, 12, 2020));
 
-        List<SimpleDate> list2 = Collections.emptyList();
+        List<SimpleDate> list2 = new ArrayList<SimpleDate>();
         Collections.addAll(list2, simpleDate, SimpleDate.FINAL_EXAM);
         
         System.out.println("Unsorted list: " + list);
@@ -27,8 +27,8 @@ public class Main {
         System.out.println("Index of simpleDate in sorted list: " + Collections.binarySearch(list,simpleDate ));
         System.out.println("Index of SimpleDate.FINAL_EXAM in list: " + Collections.binarySearch(list,SimpleDate.FINAL_EXAM ));
 
-        Collections.sort(list, new MonthComparator());
-        System.out.println("Sorted list by month: " + list);
+        Collections.sort(list, new DayComparator());
+        System.out.println("Sorted list by day: " + list);
     }
     
 }
