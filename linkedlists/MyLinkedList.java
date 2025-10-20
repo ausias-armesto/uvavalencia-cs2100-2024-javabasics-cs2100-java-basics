@@ -15,8 +15,6 @@ public class MyLinkedList<T> {
         if (head == null) {
             head = newNode;
         } else {
-            // newNode.next = head.next;
-            // head.next = newNode;
             newNode.setNext(head.getNext()); // Set the new node's next to the current head's next
             head.setNext(newNode); // Set the current head's next to the new node
         }
