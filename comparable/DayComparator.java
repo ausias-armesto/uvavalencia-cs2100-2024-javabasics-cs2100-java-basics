@@ -6,5 +6,5 @@ public class DayComparator implements java.util.Comparator<SimpleDate> {
     public int compare(SimpleDate date1, SimpleDate date2) {
         return date1.getDay() - date2.getDay();
     }
-    
+
 }

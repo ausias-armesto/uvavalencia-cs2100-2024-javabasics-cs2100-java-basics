@@ -1,10 +1,10 @@
 package linkedlists;
 
-public class LinkedList<T> {
+public class MyLinkedList<T> {
     
     private Node<T> head;
 
-    public LinkedList() {
+    public MyLinkedList() {
         head = null;
     }
 
@@ -17,8 +17,8 @@ public class LinkedList<T> {
         } else {
             // newNode.next = head.next;
             // head.next = newNode;
-            newNode.setNext(head.getNext());
-            head.setNext(newNode);
+            newNode.setNext(head.getNext()); // Set the new node's next to the current head's next
+            head.setNext(newNode); // Set the current head's next to the new node
         }
     }
 
@@ -34,11 +34,11 @@ public class LinkedList<T> {
         }
 
         Node<T> current = head;
-        while (current.getNext() != null && !current.getNext().getData().equals(data)) {
+        while (current.getNext() != null && !current.getNext().getData().equals(data)) { // Traverse the list to find the node to remove
             current = current.getNext();
         }
 
-        if (current.getNext() != null) {
+        if (current.getNext() != null) { // Found the node to remove if not the end of the LinkedList
             current.setNext(current.getNext().getNext());  // Bypass the node to remove
         }
     }
@@ -47,10 +47,12 @@ public class LinkedList<T> {
     public String toString() {
         Node<T> current = head;
         StringBuilder sb = new StringBuilder();
-        while (current != null) {
+        while (current != null) { // Traverse the LinkedList
             sb.append(current.getData());
-            sb.append(" -> ");
-            current = current.getNext();
+            current = current.getNext(); // Move to the next node
+            if (current != null) {
+                sb.append(" -> ");
+            }
         }
         return sb.toString();
     }
@@ -58,7 +60,7 @@ public class LinkedList<T> {
 // Check if the list contains an element
     public boolean contains(T data) {
         Node<T> current = head;
-        while (current != null) {
+        while (current != null) { // Traverse the LinkedList
             if (current.getData().equals(data)) {
                 return true;
             }
@@ -71,7 +73,7 @@ public class LinkedList<T> {
     public int size() {
         int count = 0;
         Node<T> current = head;
-        while (current != null) {
+        while (current != null) { // Traverse the LinkedList
             count++;
             current = current.getNext();
         }
