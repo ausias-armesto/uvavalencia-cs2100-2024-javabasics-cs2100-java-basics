@@ -14,9 +14,9 @@ public class Main {
         list.remove("Banana");
         System.out.println("After removing 'Banana': " + list);
         
-        System.out.println("Does the list contain 'Cherry'? " + list.contains("Cherry"));
-        System.out.println("Does the list contain 'Orange'? " + list.contains("Orange"));
-        System.out.println("Size of the list: " + list.size());
+        System.out.println("Does the LinkedList contain 'Cherry'? " + list.contains("Cherry"));
+        System.out.println("Does the LinkedList contain 'Orange'? " + list.contains("Orange"));
+        System.out.println("Size of the LinkedList: " + list.size());
 
     }
 
