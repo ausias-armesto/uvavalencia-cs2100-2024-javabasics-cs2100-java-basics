@@ -45,3 +45,13 @@ Create a class named _FindMinMax.java_ that ask the user to input **n** numbers 
 Notes:
 - First argument is the number of elements in the array
 - Next arguments are the elements of the array
+
+
+## Assigment 6 (Optional)
+
+Implement the DoubleLinkList based on the current implementatino for LinkedList
+
+
+## Assigment 7: Trees
+
+Implement the methods on the `tree` package which are not implemented yet (contains the `TODO`)
