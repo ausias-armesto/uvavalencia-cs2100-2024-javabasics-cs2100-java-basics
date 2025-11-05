@@ -46,12 +46,18 @@ Notes:
 - First argument is the number of elements in the array
 - Next arguments are the elements of the array
 
+## Assignment 6
 
-## Assigment 6 (Optional)
+Resolve the Hanoi tower problem.
+
+Notes:
+- Use the input _args_ parameters of the main method to specify the number of disks
+
+## Assigment 7 (Optional)
 
 Implement the DoubleLinkList based on the current implementatino for LinkedList
 
 
-## Assigment 7: Trees
+## Assigment 8: Trees
 
 Implement the methods on the `tree` package which are not implemented yet (contains the `TODO`)

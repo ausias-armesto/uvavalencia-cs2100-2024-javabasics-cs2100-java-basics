@@ -17,7 +17,7 @@ public class Main {
         System.out.println("\nProcessing payments...");
         paymentService.processPayment("Credit Card", 150.75);
         paymentService.processPayment("PayPal", 75.00);
-        paymentService.processPayment("Crypto Transaction", 300.00);
+        paymentService.processPayment("Crypto Wallet", 300.00);
 
         // Try an unsupported method
         paymentService.processPayment("Bank Transfer", 200.00); // This will print an error message

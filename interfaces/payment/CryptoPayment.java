@@ -24,6 +24,6 @@ class CryptoPayment implements PaymentMethod {
 
     @Override
     public String getName() {
-        return "Crypto Transaction";
+        return "Crypto Wallet";
     }
 }

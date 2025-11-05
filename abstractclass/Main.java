@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // An object reference to an abstract class can point to an object of a concrete subclass
         // widening conversion 
         AbstractDate spanishDate = new SpanishDate(1, 2, 2020);
         System.out.println("SpanishDate: " + spanishDate);
@@ -33,5 +34,4 @@ public class Main {
         System.out.println("Amount of days from SimpleDate to americanDate: " + amountOfDaysTo);
 
     }
-    
 }

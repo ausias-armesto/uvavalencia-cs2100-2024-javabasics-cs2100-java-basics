@@ -43,4 +43,8 @@ public class SimpleDate implements MyDateOperations {
         this.year = year;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Day: %d\nMonth: %d\nYear: %d", this.day, this.month, this.year);
+    }
 }

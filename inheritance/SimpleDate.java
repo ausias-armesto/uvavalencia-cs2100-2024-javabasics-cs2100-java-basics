@@ -9,7 +9,7 @@ import java.util.Date;
  */
 public class SimpleDate {
 
-    public static final SimpleDate FINAL_EXAM = new SimpleDate(20241218);
+    public static final SimpleDate FINAL_EXAM = new SimpleDate(20251218);
 
     private int day;
     private int month;
@@ -57,7 +57,7 @@ public class SimpleDate {
     }
 
     public void setYear(int year) {
-        if (year < 2000 || year > 2024) {
+        if (year < 2000 || year > 2025) {
             throw new IllegalArgumentException("Invalid year");
         }
         this.year = year;

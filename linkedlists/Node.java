@@ -9,7 +9,7 @@ public class Node<T> {
     public Node() {}
 
     public Node(T val) { 
-        this.data = val; 
+        this.data = val;
     }
 
     public Node(T val, Node<T> next) { 

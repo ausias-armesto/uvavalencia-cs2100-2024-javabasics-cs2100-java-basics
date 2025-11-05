@@ -1,6 +1,6 @@
 package abstractclass;
 
-public class SpanishDate extends AbstractDate{
+public class SpanishDate extends AbstractDate {
 
     public SpanishDate(int day, int month, int year) {
         this.setDay(day);
