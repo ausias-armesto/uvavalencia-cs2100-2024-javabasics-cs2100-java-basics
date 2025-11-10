@@ -28,12 +28,15 @@ public class Tree<T extends Comparable<T>> {
             } else { // Continue traversing left to find the appropriate spot
                 addRecursive(current.getLeft(), newNode);
             }
-        } else { // Go right
+        } else if (newNode.getData().compareTo(current.getData()) > 0) { // Go right
             if (current.getRight() == null) { // Insert in right empty subtree
                 current.setRight(newNode);
             } else { // Continue traversing right to find the appropriate spot
                 addRecursive(current.getRight(), newNode);
             }
+        } else {
+            // Duplicate value; do not insert
+            System.out.println("Duplicate value: " + newNode.getData() + ". Not inserting.");
         }
     }
 
