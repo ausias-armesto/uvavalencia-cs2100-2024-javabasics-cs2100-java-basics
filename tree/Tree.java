@@ -19,24 +19,23 @@ public class Tree<T extends Comparable<T>> {
     }
 
     private void addRecursive(Node<T> current, Node<T> newNode) {
+        // Base case: If current is null, we've found the spot to insert
         if (current == null) {
             current = newNode;
-        } else if (newNode.getData().compareTo(current.getData()) < 0) {
-            if (current.getLeft() == null) {
+        } else if (newNode.getData().compareTo(current.getData()) < 0) { // Go left
+            if (current.getLeft() == null) { // Insert in left empty subtree
                 current.setLeft(newNode);
-            } else {
+            } else { // Continue traversing left to find the appropriate spot
                 addRecursive(current.getLeft(), newNode);
             }
-        } else {
-            if (current.getRight() == null) {
+        } else { // Go right
+            if (current.getRight() == null) { // Insert in right empty subtree
                 current.setRight(newNode);
-            } else {
+            } else { // Continue traversing right to find the appropriate spot
                 addRecursive(current.getRight(), newNode);
             }
         }
     }
-
-    
 
     // Remove an element from the tree
     public void remove(T data) {
@@ -48,29 +47,35 @@ public class Tree<T extends Comparable<T>> {
             return null;
         }
 
-        if (data.compareTo(current.getData()) < 0) {
+        if (data.compareTo(current.getData()) < 0) { // Go left
             current.setLeft(removeRecursive(current.getLeft(), data));
-        } else if (data.compareTo(current.getData()) > 0) {
+        } else if (data.compareTo(current.getData()) > 0) { // Go right
             current.setRight(removeRecursive(current.getRight(), data));
-        } else {
-            // Node to remove found
-            if (current.getLeft() == null) {
+        } else { // Node to remove found
+            if (current.getLeft() == null) { // Node with only right child or no child
                 return current.getRight();
-            } else if (current.getRight() == null) {
+            } else if (current.getRight() == null) { // Node with only left child or no child
                 return current.getLeft();
             }
-
-            // Node with two children: Get the inorder successor (smallest in the right subtree)
+            // Node with two children: Get the inorder successor (smallest in the right subtree). We could alternatively use the inorder predecessor (largest in the left subtree).
             Node<T> successor = findMin(current.getRight());
             current.setData(successor.getData());
+            // Delete the inorder successor from the right subtree
             current.setRight(removeRecursive(current.getRight(), successor.getData()));
         }
         return current;
     }
 
-    private Node<T> findMin(Node<T> current) {
+    public Node<T> findMin(Node<T> current) {
         while (current.getLeft() != null) {
             current = current.getLeft();
+        }
+        return current;
+    }
+
+    public Node<T> findMax(Node<T> current) {
+        while (current.getRight() != null) {
+            current = current.getRight();
         }
         return current;
     }
@@ -92,8 +97,32 @@ public class Tree<T extends Comparable<T>> {
     }
 
     private void printInOrder(Node<T> node, StringBuilder sb) {
-        // TODO: Implement this method
+        if (node != null) {
+            if (node.getLeft() == null && node.getRight() == null) {
+                sb.append(node.getData());
+                return;
+            }
+            if (!node.equals(root)) {
+                sb.append("[");
+            }
+            printInOrder(node.getLeft(), sb);
+            if (node.getLeft() != null) {
+                sb.append(" ↗ ");
+            }
+            sb.append(node.getData());
+            if (node.getRight() != null) {
+                sb.append(" ↘ ");
+            }
+            printInOrder(node.getRight(), sb);
+            if (!node.equals(root)) {
+                sb.append("]");
+            }
+        }
     }
+
+    // private void printInOrder(Node<T> node, StringBuilder sb) {
+    //     // TODO: Implement this method
+    // }
 
     private void printPreOrder(Node<T> node, StringBuilder sb) {
         // TODO: Implement this method
@@ -114,7 +143,8 @@ public class Tree<T extends Comparable<T>> {
             if (current.getData().equals(data)) {
                 return true;
             }
-            current = current.getLeft();
+            // Traverse left or right based on comparison
+            current = (current.getData().compareTo(data) > 0) ? current.getLeft() : current.getRight();
         }
         return false;
     }
