@@ -4,7 +4,6 @@ public class Node<T extends Comparable<T>> {
 
     private T data;
 
-    private Node<T> parent;
     private Node<T> left;
     private Node<T> right;
 
@@ -12,13 +11,6 @@ public class Node<T extends Comparable<T>> {
 
     public Node(T val) { 
         this.data = val; 
-    }
-
-    public Node(T val, Node<T> parent, Node<T> left, Node<T> right) { 
-        this.data = val; 
-        this.parent = parent;
-        this.left = left;
-        this.right = right;
     }
 
     public T getData() { 
@@ -45,12 +37,4 @@ public class Node<T extends Comparable<T>> {
         this.right = right; 
     }
 
-    public Node<T> getParent() {
-        return parent;
-    }
-
-    public void setParent(Node<T> parent) {
-        this.parent = parent;
-    }
-    
 }
