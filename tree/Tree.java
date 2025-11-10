@@ -97,32 +97,8 @@ public class Tree<T extends Comparable<T>> {
     }
 
     private void printInOrder(Node<T> node, StringBuilder sb) {
-        if (node != null) {
-            if (node.getLeft() == null && node.getRight() == null) {
-                sb.append(node.getData());
-                return;
-            }
-            if (!node.equals(root)) {
-                sb.append("[");
-            }
-            printInOrder(node.getLeft(), sb);
-            if (node.getLeft() != null) {
-                sb.append(" ↗ ");
-            }
-            sb.append(node.getData());
-            if (node.getRight() != null) {
-                sb.append(" ↘ ");
-            }
-            printInOrder(node.getRight(), sb);
-            if (!node.equals(root)) {
-                sb.append("]");
-            }
-        }
+        // TODO: Implement this method
     }
-
-    // private void printInOrder(Node<T> node, StringBuilder sb) {
-    //     // TODO: Implement this method
-    // }
 
     private void printPreOrder(Node<T> node, StringBuilder sb) {
         // TODO: Implement this method
