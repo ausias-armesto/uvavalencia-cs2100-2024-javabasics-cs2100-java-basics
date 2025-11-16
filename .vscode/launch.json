@@ -5,6 +5,34 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "redblacktree.Main",
+            "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
+        },
+        {
+            "type": "java",
+            "name": "HanoiTower",
+            "request": "launch",
+            "mainClass": "HanoiTower",
+            "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
+        },
+        {
+            "type": "java",
+            "name": "GuessNumber",
+            "request": "launch",
+            "mainClass": "GuessNumber",
+            "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
+        },
+        {
+            "type": "java",
+            "name": "Factorial",
+            "request": "launch",
+            "mainClass": "Factorial",
+            "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "tree.Main",
             "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
         },

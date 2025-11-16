@@ -27,7 +27,29 @@ public class Main {
          */
 
         System.out.println("Initial tree: " + tree);
-
+        tree.remove("Unknown"); // Trying to remove a non-existing element
+        tree.remove("Grapes"); // Removing a leaf node
+        System.out.println("After removing 'Grapes': " + tree);
+            /*
+                        Melon
+                        /     \
+                Banana     Orange
+                /    \          \
+            Apple   Cherry   Pineapple
+                    /    \       
+            Blueberry   Mango
+            */
+        tree.remove("Orange"); // Removing a node with one child
+        System.out.println("After removing 'Orange': " + tree);
+         /*
+                     Melon
+                    /     \
+               Banana     Pineapple
+               /    \       
+           Apple   Cherry
+                  /    \       
+           Blueberry   Mango
+         */
         tree.remove("Banana");
         /*
                      Melon
@@ -37,8 +59,6 @@ public class Main {
            Apple   Cherry   Pineapple
                       \
                       Mango
-                      /
-                   Grapes
          */
         System.out.println("After removing 'Banana': " + tree);
 
