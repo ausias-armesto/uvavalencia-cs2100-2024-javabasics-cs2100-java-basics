@@ -60,12 +60,4 @@ public class AVLNode<T extends Comparable<T>> {
         this.height = height;
     }
 
-    public boolean isLeftChild() {
-        return this.parent != null && this.parent.getLeft() == this;
-    }
-
-    public boolean isRightChild() {
-        return this.parent != null && this.parent.getRight() == this;
-    }
-
 }

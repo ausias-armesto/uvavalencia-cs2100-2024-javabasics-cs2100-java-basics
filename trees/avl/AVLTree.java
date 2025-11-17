@@ -10,10 +10,12 @@ public class AVLTree<T extends Comparable<T>> {
 
 
     // ---------- Helper methods ----------
+    // Returns the height of the given node.
     private int height(AVLNode<T> node) {
         return node == null ? -1 : node.getHeight();
     }
 
+    // Updates the height of the given node based on its children's heights.
     private void updateHeight(AVLNode<T> node) {
         node.setHeight(1 + Math.max(height(node.getLeft()), height(node.getRight())));
     }
