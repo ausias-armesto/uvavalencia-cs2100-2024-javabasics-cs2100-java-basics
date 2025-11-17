@@ -15,18 +15,23 @@ public class Main {
         tree.add("Grapes");
         tree.add("Pineapple");
         /*
-                     Melon
-                    /     \
-               Banana     Orange
-               /    \          \
-           Apple   Cherry   Pineapple
-                  /    \       
-           Blueberry   Mango
-                      /
-                   Grapes
+                     Cherry(B)
+                  /           \
+        Banana(B)            Melon(R)
+        /    \                /     \
+    Apple(R) Blueberry(R)   Mango(B) Orange(B)
+                            /            \
+                        Grapes(R).      Pineapple(R)
          */
 
         System.out.println("Red Bloack tree: ");
         System.out.println(tree);
+
+        String treeInOrderRepresentation = "In-Order: [Apple(R) ↗ Banana(B) ↘ Blueberry(R)] ↗ Cherry(B) ↘ [[Grapes(R) ↗ Mango(B)] ↗ Melon(R) ↘ [Orange(B) ↘ Pineapple(R)]]";
+        if (tree.toString().equals(treeInOrderRepresentation)) {
+            System.out.println("✅ The red-black tree structure is correct.");
+        } else {
+            System.out.println("❌ The red-black tree structure is incorrect.");
+        }
     }
 }

@@ -61,47 +61,35 @@ private void fixViolation(RedBlackNode<T> node) {
     while (node != root && node.getParent().getColor() == Color.RED) {
         RedBlackNode<T> parent = node.getParent();
         RedBlackNode<T> grandparent = parent.getParent();
+        RedBlackNode<T> uncle = node.getUncle();
 
         if (grandparent == null) {
             break; // Safety check
-        } else if (parent.isLeftChild()) { // Parent is a left child
-            RedBlackNode<T> uncle = node.getUncle();
-
-            if (uncle != null && uncle.getColor() == Color.RED) { // Case 1: Uncle is red
+        } else if (uncle != null && uncle.getColor() == Color.RED) { // Case 1: Uncle is red
                 parent.setColor(Color.BLACK);
                 uncle.setColor(Color.BLACK);
                 grandparent.setColor(Color.RED);
                 // Red-red violation is fixed in the child subtree, but other violations may exist up the tree
                 node = grandparent; // Move up the node pointer to grandparent and continue fixing in the next loop iteration
-            } else {
-                if (node.isRightChild()) { // Case 2: Fix the tree as it is left-right heavy, perform left rotation
+        } else { // Case 2: Uncle is black or null
+            if (parent.isLeftChild()) { // Parent is a left child
+                if (node.isRightChild()) { // Fix the tree as it is left-right heavy, perform left rotation
                     rotateLeft(parent);
                     node = parent; // Update node and parent pointers
                     parent = node.getParent();
                 }
-                // Case 3: The tree is left-left heavy, perform right rotation
+                // Case 3: The tree is now left-left heavy, perform right rotation
                 parent.setColor(Color.BLACK);
                 grandparent.setColor(Color.RED);
                 rotateRight(grandparent);
                 // Red-red violation is fixed, so the the condition of the next loop iteration will be false
-            }
-
-        } else { // Parent is a right child
-            RedBlackNode<T> uncle = node.getUncle();
-
-            if (uncle != null && uncle.getColor() == Color.RED) { // Case 1: Uncle is red
-                parent.setColor(Color.BLACK);
-                uncle.setColor(Color.BLACK);
-                grandparent.setColor(Color.RED);
-                // Red-red violation is fixed in the child subtree, but other violations may exist up the tree
-                node = grandparent; // Move up the node pointer to grandparent and continue fixing in the next loop iteration
-            } else {
-                if (node.isLeftChild()) { // Case 2: Fix the tree as it is right-left heavy, perform right rotation
+            } else { // Parent is a right child
+                if (node.isLeftChild()) { // Fix the tree as it is right-left heavy, perform right rotation
                     rotateRight(parent);
                     node = parent; // Update node and parent pointers
                     parent = node.getParent();
                 }
-                // Case 3: The tree is right-right heavy, perform left rotation
+                // Case 3: The tree is now right-right heavy, perform left rotation
                 parent.setColor(Color.BLACK);
                 grandparent.setColor(Color.RED);
                 rotateLeft(grandparent);
