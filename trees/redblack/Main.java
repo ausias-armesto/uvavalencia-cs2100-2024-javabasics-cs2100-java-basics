@@ -1,4 +1,4 @@
-package redblacktree;
+package trees.redblack;
 
 public class Main {
     

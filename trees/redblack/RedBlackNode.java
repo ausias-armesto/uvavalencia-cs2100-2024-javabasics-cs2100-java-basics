@@ -1,45 +1,37 @@
-package redblacktree;
+package trees.redblack;
 import java.awt.Color;
 
-public class RedBlackNode<T extends Comparable<T>> {
+import trees.Node;
 
-    private T data;
+public class RedBlackNode<T extends Comparable<T>> extends Node<T> {
 
     private RedBlackNode<T> parent;
-    private RedBlackNode<T> left;
-    private RedBlackNode<T> right;
     private Color color;
 
     public RedBlackNode() {}
 
     public RedBlackNode(T val, RedBlackNode<T> parent) { 
-        this.data = val; 
+        super(val);
         this.parent = parent;
         this.color = Color.RED; // New nodes are typically red in a red-black tree
     }
 
-    public T getData() { 
-        return data; 
-    }
-
-    public void setData(T data) { 
-        this.data = data; 
-    }
-
+    @Override
     public RedBlackNode<T> getLeft() { 
-        return left; 
+        return (RedBlackNode<T>) super.getLeft(); 
     }
 
     public void setLeft(RedBlackNode<T> next) { 
-        this.left = next; 
+        super.setLeft(next); 
     }
 
+    @Override
     public RedBlackNode<T> getRight() { 
-        return right; 
+        return (RedBlackNode<T>) super.getRight(); 
     }
 
     public void setRight(RedBlackNode<T> right) { 
-        this.right = right; 
+        super.setRight(right); 
     }
 
     public RedBlackNode<T> getParent() {
@@ -64,9 +56,9 @@ public class RedBlackNode<T extends Comparable<T>> {
         }
         RedBlackNode<T> grandParent = parent.getParent();
         if (grandParent.getLeft() == parent) { // If parent is left child
-            return grandParent.getRight();
+            return (RedBlackNode<T>) grandParent.getRight();
         } else { // If parent is right child
-            return grandParent.getLeft();
+            return (RedBlackNode<T>) grandParent.getLeft();
         }
     }
 

@@ -1,10 +1,10 @@
-package tree;
+package trees.bst;
 
 public class Main {
     
     public static void main(String[] args) {
         // Sample usage
-        Tree<String> tree = new Tree<>();
+        BSTree<String> tree = new BSTree<>();
         tree.add("Melon"); 
         tree.add("Banana");
         tree.add("Cherry");

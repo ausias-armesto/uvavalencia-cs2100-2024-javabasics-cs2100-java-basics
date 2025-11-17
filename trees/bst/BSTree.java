@@ -1,10 +1,10 @@
-package tree;
+package trees.bst;
 
-public class Tree<T extends Comparable<T>> {
+public class BSTree<T extends Comparable<T>> {
     
     private Node<T> root;
 
-    public Tree() {
+    public BSTree() {
         root = null;
     }
 

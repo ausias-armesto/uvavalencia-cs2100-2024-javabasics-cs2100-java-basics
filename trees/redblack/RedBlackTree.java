@@ -1,8 +1,10 @@
-package redblacktree;
+package trees.redblack;
 
 import java.awt.Color;
 
-public class RedBlackTree<T extends Comparable<T>> {
+import trees.BinaryTree;
+
+public class RedBlackTree<T extends Comparable<T>> extends BinaryTree<T> {
     
     private RedBlackNode<T> root;
 

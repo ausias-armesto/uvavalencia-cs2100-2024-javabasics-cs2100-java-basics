@@ -5,6 +5,20 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "trees.redblack.Main",
+            "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "trees.avl.Main",
+            "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "redblacktree.Main",
             "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
         },
