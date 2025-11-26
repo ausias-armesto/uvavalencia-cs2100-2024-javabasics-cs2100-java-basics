@@ -3,11 +3,17 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "queues.Main",
+            "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
+        },
+        {
+            "type": "java",
             "name": "Hashmaps",
             "request": "launch",
             "mainClass": "hashmaps.Main",
             "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
-
         },
         {
             "type": "java",
