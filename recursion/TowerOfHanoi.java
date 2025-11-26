@@ -25,7 +25,7 @@ public class TowerOfHanoi {
     }
 
     public static void main(String[] args) {
-        int numOfDisks = Integer.parseInt(args[0]); // Set the number of disks
+        int numOfDisks = 20; // Integer.parseInt(args[0]); // Set the number of disks
         long startTime = System.nanoTime();
         solveHanoi(numOfDisks, 'A', 'C', 'B'); // 'A' is source, 'C' is target, 'B' is auxiliary
         long endTime = System.nanoTime();
