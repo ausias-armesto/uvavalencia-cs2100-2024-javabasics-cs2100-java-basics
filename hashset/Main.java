@@ -1,24 +1,31 @@
 package hashset;
 
+
+
+
 public class Main {
 
     public static void main(String[] args) {
         // Your HashSet code would go here
-        java.util.Set<Integer> set = new java.util.HashSet<>();
-        set.add(5);
-        set.add(3);
-        set.add(8);
-        set.add(5); // Duplicate, will not be added
-        set.add(1);
-        set.add(null); // HashSet allows null
+        java.util.Set<Person> persons = new java.util.HashSet<>();
+        Person gasol = new Person("Pau", "Gasol");
+        persons.add(new Person("Rafael", "Nadal"));
+        persons.add(gasol);
+        persons.add(new Person("Carlos", "Sainz"));
+        persons.add(new Person("Rafael", "Nadal")); // Duplicate, will not be added
+        persons.add(new Person("Carlos", "Sainz"));
+        persons.add(null); // HashSet allows null
 
-        System.out.println("Set contains 3: " + set.contains(3));
-        System.out.println("Set contains 7: " + set.contains(7));
+        // The contains method uses equals() and hashCode() to check for presence
+        // The contains method costs O(1) on average
+        System.out.println("Set contains 3: " + persons.contains(gasol));
+        System.out.println("Set contains 7: " + persons.contains(new Person("Rafael", "Nadal")));
 
         System.out.println("Elements in the set:");
-        for (Integer element : set) {
-            System.out.println(element);
+        for (Person person : persons) {
+            System.out.println(person);
         }
+
     }   
     
 }
