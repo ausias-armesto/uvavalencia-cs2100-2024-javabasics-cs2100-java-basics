@@ -3,6 +3,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Hashmaps",
+            "request": "launch",
+            "mainClass": "hashmaps.Main",
+            "projectName": "uvavalencia-cs2100-2024-javabasics-cs2100-java-basics_4786a012"
+
+        },
+        {
+            "type": "java",
             "name": "TowerOfHanoi",
             "request": "launch",
             "mainClass": "recursion.TowerOfHanoi",
